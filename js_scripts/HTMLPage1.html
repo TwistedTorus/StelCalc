@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Stellaris Eco-Calculator</h2>
+
+<p>Set a target for resource outputs and this calculator will determine how many of each job you will need to reach that target. </p>
+
+<p> jobs in calculator: <p>
+
+<p id="jobs"></p>
+
+<p> resources in calculator: </p>
+
+<p id="resources"></p>
+
+<p id = "table_insertion_point"> </p>
+
+<button type="button" id = "edit_jm_button"> Edit Jobs</button>
+
+<p id = "edits_insertion_point"> </p>
+
+<p> set resource targets (default is 0) <p>
+
+  <label for="Ec_Target">Energy Target:</label>
+  <input type="number" id="Ec_Target" name="Ec_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/a/a9/Energy.png" alt="Ec_Symb" width="20" height="20">
+  <label for="Min_Target">Mineral Target:</label>
+  <input type="number" id="Min_Target" name="Min_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/1/10/Minerals.png" alt="Min_Symb" width="20" height="20">
+  <label for="Food_Target">Food Target:</label> 
+  <input type="number" id="Food_Target" name="Food_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/c/c6/Food.png" alt="Food_Symb" width="20" height="20"> 
+  <br><br>
+
+    <label for="Alloys">Alloys Target:</label>
+  <input type="number" id="Alloys_Target" name="Alloys_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/9/9a/Alloys.png" alt="Alloy_Symb" width="20" height="20">
+  <label for="Cg_Target">Consumer Goods Target:</label>
+  <input type="number" id="Cg_Target" name="Cg_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/f/fe/Consumer_goods.png" alt="Cg_Symb" width="20" height="20">
+  <label for="Science_Target">Science Target:</label> 
+  <input type="number" id="Science_Target" name="Science_Target" style="width: 50px;">
+  <img src="https://stellaris.paradoxwikis.com/images/thumb/2/20/Research.png/24px-Research.png" alt="Food_Symb" width="20" height="20"> 
+
+  <br><br>
+
+  <button type="button" id = "calculate_button"> Calculate Required Jobs</button>
+  
+
+  <br><br>
+
+  <p>jobs needed: <p>
+  <p id="jobs_needed"></p>
+
+  <p id = "debugging"> </p>
+
+<script type = "module" src="page_model.js"></script>
+</body>
+</html>
