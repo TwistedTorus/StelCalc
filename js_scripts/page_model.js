@@ -5,8 +5,9 @@ class page_model {
 	constructor(){
 
 	this.om = new outputs_model();
-	this.om.add_default_jobs();
-	this.om.add_default_resources();
+	this.om.apply_modifiers();
+	//this.om.add_default_jobs();
+	//this.om.add_default_resources();
 
 	this.create_job_definition_table();
 	this.create_resource_definition_table();
@@ -62,7 +63,6 @@ class page_model {
 		c.innerHTML = "Resource";
 		c = r.insertCell();
 		c.innerHTML = "Symbol";
-		console.debug(this.om.resources_list);
 		for (let resource of this.om.resources_list) {
 			r = t.insertRow();
 			c = r.insertCell();
@@ -92,7 +92,7 @@ class page_model {
 			c = r.insertCell();
 				
 			var x = document.createElement("INPUT");
-			x.setAttribute("size", 1);
+			//x.setAttribute("size", 1);
 			//x.setAttribute("type", "number");
 			x.value = 0;
 				//x.innerHTML = job.job_output_vector[i] - job.job_upkeep_vector[i] - job.pop_upkeep_vector[i];
@@ -265,7 +265,7 @@ class page_model {
 	
 	this.set_jobs_table();
 	var edit_button = document.createElement("button");
-	edit_button.innerHTML = "Edit";
+	edit_button.innerHTML = "Directly Edit Jobs";
 	edit_button.setAttribute("id", "edit_jm_button");
 	document.body.insertBefore(edit_button, document.getElementById("apply_button"));
 	document.getElementById("apply_button").remove();
